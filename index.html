@@ -62,9 +62,9 @@ html[dir="rtl"] .eyebrow{letter-spacing:.12em}
 header{position:sticky;top:0;z-index:100;transition:.35s;background:#0c0a09;border-bottom:1px solid var(--line)}
 header.scrolled{background:#0c0a09;border-bottom-color:var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:78px}
-.brand{display:flex;align-items:center;gap:12px;font-family:var(--f-disp);font-size:1.5rem;letter-spacing:.06em}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--f-disp);font-size:1.5rem;letter-spacing:.06em;color:var(--gold)}
 .brand img{height:46px;width:46px;border-radius:50%;object-fit:cover;border:1px solid var(--line)}
-.brand b{color:var(--gold);font-weight:400}
+.brand b{color:#fff;font-weight:400}
 .nav-menu{display:flex;align-items:center;gap:30px}
 .nav-link{font-family:var(--f-head);text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;font-weight:500;color:var(--ink);opacity:.85;transition:.2s;position:relative}
 .nav-link:hover{opacity:1;color:var(--gold)}
@@ -75,6 +75,14 @@ header.scrolled{background:#0c0a09;border-bottom-color:var(--line)}
 .lang button.active{background:var(--gold);color:#1a1207}
 .nav-call{display:inline-flex;align-items:center;gap:8px;color:var(--gold);font-family:var(--f-head);font-weight:600;letter-spacing:.08em;font-size:.9rem}
 .nav-call svg{width:16px;height:16px;fill:var(--gold)}
+.header-cta{display:flex;gap:10px;direction:ltr}
+.header-cta .hcta{width:40px;height:40px;border-radius:11px;display:grid;place-items:center;transition:.2s}
+.header-cta .hcta:hover{transform:translateY(-2px)}
+.header-cta .tel{background:linear-gradient(135deg,var(--red-2),var(--red))}
+.header-cta .wa{background:linear-gradient(135deg,var(--gold),var(--gold-2))}
+.header-cta .hcta svg{width:19px;height:19px}
+.header-cta .tel svg{fill:#fff}
+.header-cta .wa svg{fill:#1a1207}
 .burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
 .burger span{width:26px;height:2px;background:var(--ink);transition:.3s}
 
@@ -90,7 +98,7 @@ header.scrolled{background:#0c0a09;border-bottom-color:var(--line)}
 .hero-logo-wrap{display:flex;justify-content:center;position:relative;z-index:2}
 .hero-logo-big{width:100%;max-width:360px;aspect-ratio:1/1;border-radius:50%;object-fit:cover;border:1px solid var(--line);box-shadow:0 0 90px -22px var(--gold-glow)}
 .hero h1{font-family:var(--f-disp);font-size:clamp(3.6rem,11vw,8.4rem);line-height:.92;letter-spacing:.02em;margin:18px 0 6px;text-shadow:0 4px 40px rgba(0,0,0,.6)}
-.hero h1 .gold{display:block;background:linear-gradient(135deg,var(--gold),var(--gold-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero h1 .gold{display:block;background:linear-gradient(135deg,var(--gold),var(--gold-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;text-shadow:none}
 .hero h1 .ttl-w{display:block;color:#ffffff}
 .hero .eyebrow{color:#fff}
 .hero .tagline{font-family:var(--f-head);font-weight:300;font-size:clamp(1.25rem,3.4vw,2rem);color:var(--ink);letter-spacing:.04em;margin-bottom:18px}
@@ -250,6 +258,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:54px 0 30px
   .sec-head{margin-bottom:30px}
   .hero{padding:26px 0 44px}
   .nav-call{display:none}
+  .header-cta{display:none}
   .brand{font-size:1.1rem;gap:8px}
   .brand img{height:38px;width:38px}
   .lang button{padding:7px 9px;font-size:.72rem}
@@ -355,7 +364,6 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:54px 0 30px
       </div>
     </nav>
     <div class="nav-actions">
-      <a class="nav-call" href="tel:+972528861333"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1l-2.2 2.2z"/></svg><span>052-886-1333</span></a>
       <div class="lang">
         <button type="button" data-lang="ru" class="active" onclick="setLang('ru')">RU</button>
         <button type="button" data-lang="he" onclick="setLang('he')">עב</button>
