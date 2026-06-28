@@ -786,6 +786,8 @@ const header=document.getElementById("header");
 addEventListener("scroll",()=>header.classList.toggle("scrolled",scrollY>40));
 const burger=document.getElementById("burger"),navMenu=document.getElementById("navMenu");
 navMenu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>navMenu.classList.remove("open")));
+document.addEventListener("click",function(e){if(navMenu.classList.contains("open")&&!navMenu.contains(e.target)&&!burger.contains(e.target))navMenu.classList.remove("open");});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")navMenu.classList.remove("open");});
 
 /* ===== reveal ===== */
 const _rev=document.querySelectorAll(".reveal,.reveal-l,.reveal-r,.reveal-zoom");
